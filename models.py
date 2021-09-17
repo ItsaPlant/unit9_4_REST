@@ -16,7 +16,7 @@ class Todos:
         todo = [todo for todo in self.all() if todo['id'] == id]
         if todo:
             return todo[0]
-        return self.todos[id]
+        return []
 
     def create(self, data):
         self.todos.append(data)
