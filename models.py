@@ -19,8 +19,8 @@ class Todos:
         return self.todos[id]
 
     def create(self, data):
-        data.pop('csrf_token')
         self.todos.append(data)
+        self.save_all()
 
     def save_all(self):
         with open('todos.json', "w") as f:
